@@ -4,14 +4,18 @@ Some notes about [Kubernetes](https://kubernetes.io/) and more:
 - [Helm](https://helm.sh/)
 
 
-## Definition
+## Techno definitions:
+
+[Terraform](https://www.terraform.io/): Infrastructure as Code to provision and manage any cloud, infrastructure, or service.
 
 [Minikube](https://minikube.sigs.k8s.io/): It's an easy installation of k8s using a VM.
+
+[Rancher Kubernetes Engine](https://rancher.com/an-introduction-to-rke/): Easy way to deploy k8s infrasturcture
 
 [Helm](https://helm.sh/): It's a "package manager" for k8s.
 
 ## Setup:
-- install [k8s (minikube)](https://minikube.sigs.k8s.io/docs/start/linux/)
+- install a k8s cluster with [kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) (recommended) or [minikube](https://minikube.sigs.k8s.io/docs/start/linux/)
 - install [kubectl](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
 - install [helm](https://helm.sh/docs/intro/install/)
 
@@ -56,3 +60,7 @@ kubectl apply -f file.yml
 ```sh
 kubectl expose deployment hello-node --type=LoadBalancer --port=8080
 ```
+
+## Additional resources:
+- [Terraform-rke plugin](https://github.com/rancher/terraform-provider-rke)
+- [Tuto RKE/Terraform](https://medium.com/@brotandgames/deploy-a-kubernetes-cluster-using-terraform-and-rke-provider-68112463e49d)
